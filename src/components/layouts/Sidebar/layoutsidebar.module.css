@@ -1,0 +1,30 @@
+.sidebar {
+  width: 265px;
+  height: 100vh;
+  background-color: #30404D;
+  color: #fff;
+  overflow: auto;
+  transition: width 0.3s ease-in-out;
+}
+
+.open {
+  width: 265px;
+}
+
+.navigation {
+  padding: 20px;
+}
+
+.sidebarlinks {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebarlinks li {
+  padding: 10px;
+}
+
+.sidebarlinks a {
+  text-decoration: none;
+  color: #fff;
+}
