@@ -1,4 +1,4 @@
-export const menudata: Menu[] = [
+export const menudata: MenuList[] = [
   {
     endpoint: '/',
     icon: 'dashboard',

@@ -1,5 +1,15 @@
 import React from 'react';
-import { AnchorButton, H3, Text, Icon } from '@blueprintjs/core';
+import { 
+  Popover, 
+  Position, 
+  AnchorButton, 
+  H3, 
+  Text, 
+  Icon,
+  Menu,
+  MenuItem,
+  MenuDivider,
+} from '@blueprintjs/core';
 import profileImg from '../../../assets/profile.jpg';
 import { menudata } from './data';
 import styles from './layoutsidebar.module.css';
@@ -10,7 +20,7 @@ interface Props {
 
 const LayoutSidebar:React.FC<Props> = (props: Props) => {
   const { isOpen } = props;
-  const renderMenus = (menu:Menu[]) => {
+  const renderMenus = (menu:MenuList[]) => {
     return menu.map((v)=>{
       return (
         <>
@@ -38,8 +48,38 @@ const LayoutSidebar:React.FC<Props> = (props: Props) => {
       );
     });
   }
+
   return (
     <div className={[styles.sidebar, isOpen ? styles.open : ''].join(" ")}>
+      <div className={styles.topelement}>
+        <Popover
+          interactionKind="click"
+          position={Position.BOTTOM_RIGHT}
+          content={
+            <>
+              <Menu>
+                <MenuItem icon="person" text="Profile" />
+                <MenuItem icon="key" text="Change Password" />
+                <MenuDivider />
+                <MenuItem icon="log-out" text="Logout" />
+              </Menu>              
+            </>
+          }
+        >
+          <AnchorButton
+            minimal
+            className={styles.topbutton}
+          >
+            <Icon 
+              icon="cog"
+              style={{
+                color: '#CED9E0',
+              }}
+              className={styles.icon}
+             />
+          </AnchorButton>
+        </Popover>
+      </div>
       <div className={styles.profile}>
         <div
           style={{

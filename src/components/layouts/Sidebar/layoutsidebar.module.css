@@ -11,18 +11,21 @@
   width: 265px;
 }
 
-.sidebarlinks {
-  list-style-type: none;
-  padding: 0;
+.topelement {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
 }
 
-.sidebarlinks li {
-  padding: 10px;
+.topbutton:focus {
+  outline: unset;
 }
 
-.sidebarlinks a {
-  text-decoration: none;
-  color: #fff;
+.topbutton:hover .icon {
+  color: white !important;
 }
 
 .profile {
@@ -45,7 +48,7 @@
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 
