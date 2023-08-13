@@ -53,7 +53,8 @@ const LayoutSidebar:React.FC<Props> = (props: Props) => {
     <div className={[styles.sidebar, isOpen ? styles.open : ''].join(" ")}>
       <div className={styles.topelement}>
         <Popover
-          interactionKind="click"
+          className={styles.toppopover}
+          interactionKind="hover"
           position={Position.BOTTOM_RIGHT}
           content={
             <>
