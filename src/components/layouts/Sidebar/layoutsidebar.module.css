@@ -14,10 +14,22 @@
 .topelement {
   display: flex;
   justify-content: flex-end;
-  padding-top: 20px;
+  padding-top: 11px;
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
+}
+
+.topportal:focus {
+  outline: unset;
+} 
+
+.topportal > div:focus {
+  outline: unset;
+}
+
+.topportal > div > div:focus {
+  outline: unset;
 }
 
 .topbutton:focus {
@@ -50,7 +62,6 @@
   object-fit: cover;
   margin-bottom: 8px;
 }
-
 
 .menuitem {
   padding-top: 3px;
